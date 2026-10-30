@@ -6,7 +6,7 @@ async function onSearchChange(event) {
   console.log(event.target.value);
   const id = event.target.value;
   const posts = await fetch(
-    `https://jsonplaceholder.typicode.com/posts?userId=:${id}`,
+    `https://jsonplaceholder.typicode.com/posts?userId=${id}`,
   );
   const postsData = await posts.json();
   console.log(postsData);
